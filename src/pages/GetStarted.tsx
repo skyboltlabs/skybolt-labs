@@ -402,11 +402,8 @@ const GetStarted: React.FC = () => {
             id="lpForm"
             name="get-started"
             onSubmit={onSubmit}
-            data-netlify="true"
-            netlify-honeypot="bot-field"
           >
             <input type="hidden" name="form-name" value="get-started" />
-            <input type="hidden" name="bot-field" style={{ display: 'none' }} />
             {/* Row 1 */}
             <div className="form-row">
               <div className="form-group">
