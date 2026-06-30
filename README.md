@@ -79,10 +79,11 @@ npm run build
 
 ## Deployment
 
-The site is configured for deployment on Netlify with:
+The site is configured for deployment on Cloudflare Pages with:
 - Automatic builds from Git
 - Environment variable configuration
-- Proper redirects for SPA routing
+- Serverless form submissions handled via Cloudflare Pages Functions
+- Proper redirects for SPA routing using `_redirects`
 
 ## Contact Information
 
@@ -96,8 +97,8 @@ The site is configured for deployment on Netlify with:
 - **Frontend**: React 18, TypeScript, Tailwind CSS
 - **Animations**: Framer Motion
 - **Routing**: React Router
-- **Email**: Supabase Edge Functions + Resend API
-- **Deployment**: Netlify
+- **Email/Backend**: Supabase Edge Functions + Resend API (integrated via Cloudflare Pages Functions)
+- **Deployment**: Cloudflare Pages
 - **Icons**: Lucide React
 
 ## License
