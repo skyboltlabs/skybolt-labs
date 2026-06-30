@@ -91,7 +91,7 @@ export const useContactForm = (initialData: Partial<FormData> = {}) => {
     setFormStatus('submitting');
 
     try {
-      // Build URL-encoded body expected by Netlify Forms
+      // Build URL-encoded body expected by the form handler
       const encode = (data: Record<string, string>) =>
         Object.entries(data)
           .map(([k, v]) => encodeURIComponent(k) + '=' + encodeURIComponent(v ?? ''))
@@ -128,7 +128,7 @@ export const useContactForm = (initialData: Partial<FormData> = {}) => {
       return true;
 
     } catch (error: any) {
-      console.error('Netlify Forms submission error:', error);
+      console.error('Form submission error:', error);
       setFormStatus('error');
       showError('Error Sending Message', 'There was an issue sending your message. Please try again or reach us directly via WhatsApp.');
       setTimeout(() => setFormStatus('idle'), 4000);
